@@ -24,15 +24,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 
 /**
- * created my server using http.createServer, and passing the express server "app" as 
- * parameter
+ * created my server using http.createServer
+ * @param {app} - express app
  * set port to 4000
+ * @param {integer} - port number
+ * server.listen(port)
+ * @param {integer} -Binds and listens for connections on port 4000
+ * @param {function} - callback function that console port number
  */
 const port = parseInt(process.env.PORT, 10) || 4000;
 app.set('port', port);
 
 const server = http.createServer(app);
-server.listen(port);
+server.listen(port, () => {
+  console.log(`server started and runing on port ${port}`);
+});
 
 // require('./server/routes')(app);
 
