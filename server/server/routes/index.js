@@ -9,7 +9,7 @@ module.exports = (app) => {
   app.post('/api/signup', userControllers.register);
   app.post('/api/signin', userControllers.login);
 
-  app.all('', (req, res) =>
+  app.all('/api/signup/users', (req, res) =>
     res.status(405).send({
       message: 'Method Not Allowed',
     }));
