@@ -40,7 +40,7 @@ server.listen(port, () => {
   console.log(`server started and runing on port ${port}`);
 });
 
-// require('./server/routes')(app);
+require('./server/routes')(app);
 
 app.get('*', (req, res) => res.status(200).send({ message: 'Welcome to My charting Api',
 })
