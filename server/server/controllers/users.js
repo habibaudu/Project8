@@ -7,7 +7,7 @@ const secret = 'Hba821';
 
 
 export default {
-  registerUser(req, res) {
+  registe(req, res) {
     const password = bcrypt.hashSync(req.body.password, 10);
     return User
       .create({
@@ -24,7 +24,7 @@ export default {
       .catch(error => res.status(400).send(error));
   },
 
-  loginUser(req, res) {
+  login(req, res) {
     User
       .findOne({ where: {
         email: req.body.email
