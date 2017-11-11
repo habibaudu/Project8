@@ -1,23 +1,15 @@
 {
   "development": {
-    "username": "postgres",
-    "password":"oyedepo2018",
-    "database": "project8",
-    "host": "127.0.0.1",
+    "use_env_variable": "bcqnglnm:g2uv_zrjN_CHApsdSSI7Ctbb-qBzKxew@baasu.db.elephantsql.com:5432/bcqnglnm",
     "dialect": "postgres"
+
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+  "use_env_variable": "bcqnglnm:g2uv_zrjN_CHApsdSSI7Ctbb-qBzKxew@baasu.db.elephantsql.com:bcqnglnm",
+  "dialect": "postgres"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+   "use_env_variable": "bcqnglnm:g2uv_zrjN_CHApsdSSI7Ctbb-qBzKxew@baasu.db.elephantsql.com:bcqnglnm",
+   "dialect": "postgres"
   }
 }

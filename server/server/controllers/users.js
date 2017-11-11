@@ -8,13 +8,13 @@ const secret = 'Hba821';
 
 export default {
   register(req, res) {
-    const password = bcrypt.hashSync(req.body.password, 10);
+    // const password = bcrypt.hashSync(req.body.password, 10);
     return User
       .create({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         username: req.body.username,
-        password,
+        password:req.body.password,
         email: req.body.email
       })
       .then(user => res.status(201).send({ firstname: user.firstName,

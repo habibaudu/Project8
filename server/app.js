@@ -2,6 +2,7 @@ import express from 'express';
 import http from 'http';
 import logger from 'morgan';
 import bodyParser from 'body-parser';
+require('dotenv').config();
 /**
  * set up app server
  */
